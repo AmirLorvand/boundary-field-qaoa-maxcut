@@ -1,0 +1,32 @@
+PHASE C ANALYSIS  (H1 and H3)
+============================================================
+input: results/results_rows.csv
+per-graph records: 155 (family x graph x shot budget, headroom-positive)
+
+No-headroom rate (selected neighbourhoods, per family):
+  3-regular: 19.1%
+  ER: 12.8%
+
+H1 - BOUNDARY EFFECT (per-graph mean BF - NB, best-sampled)
+------------------------------------------------------------
+3-regular:  graphs=20  helped=16 hurt=2 tied=2
+   mean per-graph BF-NB = +0.1272  95% CI [+0.0810, +0.1736]
+   Wilcoxon (discordant n=18): W=6.5, p=0.0006  [supporting only]
+
+ER:  graphs=19  helped=17 hurt=2 tied=0
+   mean per-graph BF-NB = +0.1646  95% CI [+0.1035, +0.2273]
+   Wilcoxon (discordant n=19): W=7.0, p=0.0004  [supporting only]
+
+H3 - CAPTURED GAIN vs SHOT BUDGET (per-graph mean)
+------------------------------------------------------------
+3-regular:
+   shots=   32  graphs=20  BF captured=0.132 CI[0.079,0.191]  NB captured=0.076
+   shots=  128  graphs=19  BF captured=0.430 CI[0.338,0.527]  NB captured=0.318
+   shots=  512  graphs=20  BF captured=0.611 CI[0.508,0.708]  NB captured=0.534
+   shots= 2048  graphs=20  BF captured=0.824 CI[0.718,0.903]  NB captured=0.704
+
+ER:
+   shots=   32  graphs=19  BF captured=0.395 CI[0.299,0.491]  NB captured=0.232
+   shots=  128  graphs=19  BF captured=0.624 CI[0.513,0.728]  NB captured=0.568
+   shots=  512  graphs=19  BF captured=0.761 CI[0.688,0.831]  NB captured=0.703
+   shots= 2048  graphs=19  BF captured=0.883 CI[0.816,0.940]  NB captured=0.833

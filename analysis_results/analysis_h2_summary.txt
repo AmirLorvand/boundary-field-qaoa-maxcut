@@ -1,0 +1,16 @@
+PHASE C ANALYSIS  (H2 - transfer)
+============================================================
+input: results/qaoa_opt_rows.csv
+rows: 160  (headroom-positive: 134, excluded no-headroom: 26)
+objective: exact expected cut (noise-free), boundary on
+comparison: transferred WL angles vs COBYLA-optimised angles
+
+3-regular:  graphs=10
+   transferred reaches 95.1% of optimised expected cut  (95% CI [94.8%, 95.4%])
+   quality gap (optimised - transferred) = +0.570 (95% CI [+0.548, +0.589])
+   optimisation cost = 125 objective evaluations (range 101-165) vs 1 for transferred (~125x)
+
+ER:  graphs=10
+   transferred reaches 95.8% of optimised expected cut  (95% CI [95.1%, 96.4%])
+   quality gap (optimised - transferred) = +0.538 (95% CI [+0.472, +0.613])
+   optimisation cost = 145 objective evaluations (range 100-239) vs 1 for transferred (~145x)
