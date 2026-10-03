@@ -1,0 +1,50 @@
+{
+  "families": {
+    "3-regular": {
+      "n": 100
+    },
+    "ER": {
+      "n": 50
+    }
+  },
+  "k": 12,
+  "depth_p": 1,
+  "angle_source": "wurtz_lykov_3reg_p1",
+  "epsilon": 0.1,
+  "num_candidates": 6,
+  "max_rounds": 8,
+  "shot_budgets": [
+    32,
+    128,
+    512,
+    2048
+  ],
+  "n_graphs": 20,
+  "calls_per_graph": 8,
+  "base_seed": 1000,
+  "smoke": false,
+  "seed_policy": {
+    "graph_seed": "BASE_SEED + graph_index",
+    "initial_assignment": "graph_seed + 500",
+    "local_search": "graph_seed",
+    "instance_seed (per shots)": "graph_seed*100 + shots",
+    "neighbourhood/round": "instance_seed + round_id"
+  },
+  "arms_run": [
+    "LS-only",
+    "QAOA-BF",
+    "QAOA-NB"
+  ],
+  "arms_pending": [
+    "Exact (recorded in-row)",
+    "QAOA-OPT (Phase B)"
+  ],
+  "environment": {
+    "python": "3.12.5",
+    "numpy": "2.4.6",
+    "networkx": "3.6.1",
+    "platform": "macOS-26.5-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 3950.4,
+  "rows_written": 2600
+}

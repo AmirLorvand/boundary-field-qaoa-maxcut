@@ -1,0 +1,31 @@
+{
+  "families": {
+    "3-regular": {
+      "n": 100
+    },
+    "ER": {
+      "n": 50
+    }
+  },
+  "k": 12,
+  "depth_p": 1,
+  "angle_source": "wurtz_lykov_3reg_p1",
+  "epsilon": 0.1,
+  "num_candidates": 6,
+  "n_graphs": 10,
+  "calls_per_graph": 8,
+  "base_seed": 1000,
+  "optimiser": "COBYLA",
+  "n_restarts": 2,
+  "cobyla_maxiter": 100,
+  "objective": "exact expected_cost (noise-free), boundary on",
+  "start_point": "transferred WL angles + random restarts",
+  "smoke": false,
+  "environment": {
+    "python": "3.12.5",
+    "numpy": "2.4.6",
+    "networkx": "3.6.1"
+  },
+  "elapsed_seconds": 177.1,
+  "rows_written": 160
+}
